@@ -26,7 +26,7 @@ const data = [
     {
       id: 4,
       title: 'Raincoat vs stormy weather',
-      category: 'jacket',
+      category: 'jackets',
       price: 20.99,
       img: './images/stormraincoat.jpeg',
       desc: `keeps you dry no matter what `,
