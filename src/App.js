@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Data from './data/data'
 import Menu from './components/Menu'
@@ -10,15 +10,21 @@ function App() {
   const [categories, setCategories] = useState(allCategories)
 
 
+  /* filtrerar items om vi trycker all knappen laddar vi alla produkter */
   const filterItems = (category) => {
     if (category === 'all') {
       setItems(Data)
       return
     }
+    /* filtrerar items om vi trycker vald kategori via knappar laddar vi den kategorins kläder */
     const newItems = Data.filter((item) => item.category === category)
     setItems(newItems)
   }
 
+  /* gör at sidan ej laddar om när vi trycker på knapparna*/
+  useEffect(()=> {
+    console.log('starting')
+  }, [])
 
   return (
       <main>
