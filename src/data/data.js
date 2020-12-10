@@ -13,7 +13,7 @@ const data = [
       category: 'caps',
       price: 13.99,
       img: './images/NYcap.jpeg',
-      desc: `NY cap`,
+      desc: `WT cap`,
     },
     {
       id: 3,
