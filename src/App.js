@@ -32,7 +32,9 @@ function App() {
     }
     const newItems = Data.filter((item) => item.title.toLowerCase() === category)
     setItems(newItems)
+    
   }
+
 
   /* gör at sidan ej laddar om när vi trycker på knapparna*/
   useEffect(()=> {

@@ -89,9 +89,22 @@
     color: var(--clr-white);
   }
 
-  .search {
-    border: 2px solid var(--clr-gold);
+  .search-input {
+    border: 1px solid var(--clr-gold);
+    padding: 5px;
+    text-align: center;
+    color: var(--clr-gold);
   }
+
+  ::placeholder {
+    color: ivory;
+  }
+
+  
+  input:focus::placeholder {
+    color: transparent;
+  }
+
   .return-button {
     
     position: fixed; 
