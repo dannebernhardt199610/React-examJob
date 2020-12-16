@@ -1,3 +1,7 @@
+import React from 'react';
+import { FaFacebook, FaTwitter } from 'react-icons/fa';
+
+
 const data = [
     {
       id: 1,
@@ -72,4 +76,32 @@ const data = [
       desc: `jacket`,
     },
   ];
-  export default data;
+  export default data
+
+  export const links = [
+    {
+      id: 1,
+      url: '',
+      text: 'home',
+    },
+    {
+      id: 2,
+      url: '/interested',
+      text: 'interested',
+    },
+  ];
+
+  export const social = [
+    {
+      id: 1,
+      url: 'https://www.twitter.com',
+      icon: <FaTwitter />,
+    },
+    {
+      id: 2,
+      url: 'https://facebook.com',
+      icon: <FaFacebook />,
+    },
+  ];
+
+  

@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
-import Data from './data/data'
+import Data from './data/Data'
 import Menu from './components/Menu'
 import Categories from './components/Categories'
+import Navbar from './components/Navbar'
 import Search from './components/Search'
 const allCategories = ['all', ...new Set(Data.map((item) => item.category))];
 
@@ -51,6 +52,9 @@ function App() {
            <div className="underline"></div>
            <div>
            <Search categories={categories} filterItems={searchItem}/>
+           </div>
+           <div>
+           <Navbar />
            </div>
            </div>
            <Categories categories={categories} filterItems={filterItems} />
