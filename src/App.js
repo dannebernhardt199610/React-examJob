@@ -24,11 +24,20 @@ function App() {
     setItems(newItems)
   }
 
+  /* sök på en specifik vara */
+  const searchItem = (category) => {
+    if (category === '') {
+      setItems(Data)
+      return
+    }
+    const newItems = Data.filter((item) => item.title.toLowerCase() === category)
+    setItems(newItems)
+  }
+
   /* gör at sidan ej laddar om när vi trycker på knapparna*/
   useEffect(()=> {
     console.log('starting')
   }, [])
-
 
 
   return (
@@ -39,7 +48,7 @@ function App() {
           <h1> Our Clothes </h1>
            <div className="underline"></div>
            <div>
-           <Search items={items}/>
+           <Search categories={categories} filterItems={searchItem}/>
            </div>
            </div>
            <Categories categories={categories} filterItems={filterItems} />
