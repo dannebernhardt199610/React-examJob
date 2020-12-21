@@ -81,7 +81,7 @@ const data = [
   export const links = [
     {
       id: 1,
-      url: '',
+      url: '/',
       text: 'home',
     },
     {

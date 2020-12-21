@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Data from './data/Data'
 import Menu from './components/Menu'
@@ -11,7 +11,7 @@ function App() {
   const [items, setItems] = useState(Data)
   const [categories, setCategories] = useState(allCategories)
   /* Satt på knappt längst ned för att fokusera på en input längst upp på sidan */
-  const inputRef = useRef()
+
 
 
   /* filtrerar items om vi trycker all knappen laddar vi alla produkter */
@@ -47,20 +47,16 @@ function App() {
       <main>
         <section className="menu section">
         <p className='anim-circle'></p>
+        <Navbar />
           <div className="title">
           <h1> Our Clothes </h1>
-           <div className="underline"></div>
-           <div>
+          </div>
+           <div className="underline">
+           </div>
            <Search categories={categories} filterItems={searchItem}/>
-           </div>
-           <div>
-           <Navbar />
-           </div>
-           </div>
            <Categories categories={categories} filterItems={filterItems} />
            <Menu items={items} />
-           <div className="underline"></div>
-
+           <div className="underline-bottom"></div>
       </section>
       </main>
   );
