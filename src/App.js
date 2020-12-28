@@ -49,7 +49,7 @@ function App() {
   return (
     <>
       <main>
-        <section className="menu section">
+        <section className="menu-section">
         <p className='anim-circle'></p>
           <div className="title">
           <h1> Our Clothes </h1>
