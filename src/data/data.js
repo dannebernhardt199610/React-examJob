@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
+import { AiOutlineForm, AiOutlineHome } from "react-icons/ai";
 
 
 const data = [
@@ -83,11 +84,13 @@ const data = [
       id: 1,
       url: '/',
       text: 'home',
+      icon: <AiOutlineHome />,
     },
     {
       id: 2,
       url: '/interested',
       text: 'interested',
+      icon: <AiOutlineForm />,
     },
   ];
 

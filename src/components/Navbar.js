@@ -1,64 +1,62 @@
-import React, { useState, useRef, useEffect } from "react"
-import { FaBars } from 'react-icons/fa';
-import { links, social } from '../data/Data'
-
-
+import React, { useState, useRef, useEffect } from "react";
+import { FaBars } from "react-icons/fa";
+import { links, social } from "../data/Data";
+import { Link} from "react-router-dom";
 const Navbar = () => {
-    const [showLinks, setShowLinks] = useState(false);
-    const linksContainerRef = useRef(null)
-    const linksRef = useRef(null)
+  const [showLinks, setShowLinks] = useState(false);
+  const linksContainerRef = useRef(null);
+  const linksRef = useRef(null);
 
-    useEffect(() => {
-        const linksHeight = linksRef.current.getBoundingClientRect().height
-        
-        if (showLinks) {
-            linksContainerRef.current.style.height = `${linksHeight} px`
-        }
-        else {
-            linksContainerRef.current.style.height = '0px'
-        }
-    }, [showLinks])
+  useEffect(() => {
+    const linksHeight = linksRef.current.getBoundingClientRect().height;
 
-    return (
+    if (showLinks) {
+      linksContainerRef.current.style.height = `${linksHeight} px`;
+    } else {
+      linksContainerRef.current.style.height = "0px";
+    }
+  }, [showLinks]);
 
-    <nav>
+
+  return (
+      <nav>
         <div className="nav-center">
-        <div className="nav-header">
+          <div className="nav-header">
             {/* funkar ej */}
-        <button className='nav-toggle' onClick={() => setShowLinks(!showLinks)}>
-            <FaBars />
-        </button>
-            
-        <div className="links-container" ref={linksContainerRef}>
+            <button
+              className="nav-toggle"
+              onClick={() => setShowLinks(!showLinks)}
+            >
+              <FaBars />
+            </button>
 
-        <ul className="links" ref={linksRef}>
+            <div className="links-container" ref={linksContainerRef}>
+              <ul className="links" ref={linksRef}>
                 {links.map((link) => {
-                    const { id, url, text } = link
-                    return(
+                  const { id, url, icon, text } = link;
+                  return (
                     <li key={id} id={showLinks ? "" : "hidden"}>
-                    <a href={url}>{text}</a>
+                      <Link to={url}>{icon} {text}</Link>
                     </li>
-                )
+                  );
                 })}
-            </ul>
+              </ul>
             </div>
-        </div>
-        
+          </div>
 
-        <ul className="social-icons">
+          <ul className="social-icons">
             {social.map((socialIcon) => {
-                const { id, url, icon } = socialIcon
-                return (
+              const { id, url, icon } = socialIcon;
+              return (
                 <span key={id}>
                   <a href={url}>{icon}</a>
                 </span>
-                )
-                })}
-            </ul>
+              );
+            })}
+          </ul>
         </div>
-    </nav>
-    
-    )
-}
+      </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;

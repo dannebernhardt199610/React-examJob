@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
 :root {
     --clr-gold: #c59d5f;
     --transition: all 0.6s linear;
@@ -14,6 +17,53 @@
     color: snow;
 }
 
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+}
+
+.labels {
+  font-size: 1.5rem;
+  font-family: 'Staatliches', cursive;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--clr-gold);
+}
+
+.form-input, .form-textarea, .select-value{
+  border: 1px solid var(--clr-gold);
+  color: var(--clr-gold);
+  width: 200px;
+  height: 30px;
+  text-align: center;
+
+}
+
+.form-textarea {
+  height: 80px;
+  text-align: start;
+
+}
+
+.form-option {
+  color: var(--clr-gold);
+}
+
+.btnn{
+  padding: 2px 15px;
+  margin: 20px;
+  color: rgb(224, 238, 230);
+  font-family: 'Staayliches', cursive;
+  background: transparent;
+}
+
+.select-value {
+  background-color: black;
+}
 
 .section-center {
     width: 50vw;

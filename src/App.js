@@ -3,9 +3,12 @@ import './App.css';
 import Data from './data/Data'
 import Menu from './components/Menu'
 import Categories from './components/Categories'
-import Navbar from './components/Navbar'
 import Search from './components/Search'
+
+
+
 const allCategories = ['all', ...new Set(Data.map((item) => item.category))];
+
 
 function App() {
   const [items, setItems] = useState(Data)
@@ -44,10 +47,10 @@ function App() {
 
 
   return (
+    <>
       <main>
         <section className="menu section">
         <p className='anim-circle'></p>
-        <Navbar />
           <div className="title">
           <h1> Our Clothes </h1>
           </div>
@@ -59,6 +62,7 @@ function App() {
            <div className="underline-bottom"></div>
       </section>
       </main>
+       </>
   );
 }
 
