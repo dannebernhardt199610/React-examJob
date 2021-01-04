@@ -31,12 +31,14 @@ const Navbar = () => {
             </button>
 
             <div className="links-container" ref={linksContainerRef}>
+
+              
               <ul className="links" ref={linksRef}>
                 {links.map((link) => {
                   const { id, url, icon, text } = link;
                   return (
-                    <li key={id} id={showLinks ? "" : "hidden"}>
-                      <Link to={url}>{icon} {text}</Link>
+                    <li className="nav-item" key={id} id={showLinks ? "" : "hidden"}>
+                      <Link to={url}>{icon}</Link>
                     </li>
                   );
                 })}
