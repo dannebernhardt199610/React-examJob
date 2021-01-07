@@ -56,7 +56,7 @@ const Form = () => {
   return (
     <form className="form-header" onSubmit={sendMessage} method="POST">
       <div className="form-group">
-        <label className="name">Name</label>
+        <label className="form-label-name">Name</label>
         <input
           className="form-message"
           type="text"
@@ -68,7 +68,7 @@ const Form = () => {
       </div>
 
       <div className="form-group">
-        <label className="inputEmail name">Email adress</label>
+        <label className="form-label-name">Email adress</label>
         <input
           className="form-message"
           type="email"
@@ -80,9 +80,9 @@ const Form = () => {
       </div>
 
       <div className="form-group">
-        <label className="message name">Message</label>
+        <label className="form-label-name">Message</label>
         <textarea
-          className="form-message"
+          className="form-message form-textarea"
           rows="3"
           placeholder="Enter message please"
           required
@@ -96,15 +96,6 @@ const Form = () => {
       <ToastContainer />
     </form>
   );
-
-  const contextClass = {
-    success: "bg-blue-600",
-    error: "bg-red-600",
-    info: "bg-gray-600",
-    warning: "bg-orange-400",
-    default: "bg-indigo-600",
-    dark: "bg-white-600 font-gray-300",
-  };
 };
 
 export default Form;

@@ -59,11 +59,19 @@
 }
 
 .btnn {
-  padding: 2px 15px;
+  padding: 20px;
   margin: 20px;
-  color: rgb(224, 238, 230);
+  color: rgb(12, 235, 108);
   font-family: "Staayliches", cursive;
+  font-size: 1.5rem;
   background: transparent;
+  border: none;
+  border-bottom: 4px solid var(--clr-gold);
+}
+
+.btnn:hover {
+  background: var(--clr-gold);
+  color: var(--clr-white);
 }
 
 .select-value {
@@ -154,8 +162,7 @@
 }
 
 .search-input {
-  font-family:"Staatliches", "Times New Roman", Times, serif;
-
+  font-family: "Staatliches", "Times New Roman", Times, serif;
   border: 1px solid var(--clr-gold);
   text-align: center;
   justify-content: center;
@@ -182,7 +189,7 @@ input:focus::placeholder {
   border-bottom: 4px solid var(--clr-gold);
   -webkit-animation: breathing 4s ease-out infinite normal;
   animation: breathing 4s ease-out infinite normal;
-  font-family:"Staatliches";
+  font-family: "Staatliches";
   font-size: 14px;
   background: transparent;
   color: #fff;
@@ -317,10 +324,8 @@ input:focus::placeholder {
   right: 70%;
 }
 .links a:hover {
-  background: var(--clr-primary-8);
-  color: var(--clr-primary-5);
-  padding: 0;
-  background: transparent;
+  background: var(--clr-gold);
+  color: var(--clr-white);
   transition: var(--transition);
 }
 
@@ -344,15 +349,38 @@ input:focus::placeholder {
 
 .form-header {
   display: grid;
+  font-size: 20px;
 }
 
 .form-message {
-  font-size: 20px;
   font-family: "Staatliches";
+  margin: 20px;
+  width: 50vw;
+  height: 3rem;
+  max-width: 400px;
+  background-color: transparent;
+  max-height: 250px;
+  font-size: 1.5rem;
   display: grid;
+  text-align: center;
+  border: none;
+  border-bottom: 4px solid var(--clr-gold);
 }
 
-.name {
-  font-size: 20px;
+.form-label-name {
+  font-family: "Staatliches";
+  font-weight: bolder;
+  font-size: 30px;
   color: var(--clr-gold);
+  display: block;
+  text-align: center;
+}
+
+.form-textarea {
+  height: 100px;
+  border: 2px solid var(--clr-gold);
+}
+
+.form-textarea:focus::placeholder {
+  color: transparent;
 }
