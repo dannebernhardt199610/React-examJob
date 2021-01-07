@@ -1,62 +1,110 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import emailjs, { init } from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+init("user_wDDr0OQVCk88Xw4XU1Q4O");
 
 const Form = () => {
-    const [username, setUserName] = useState("");
-    const [comments, setComments] = useState("")
-    const [topic, setTopic] = useState("")
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
 
-   const handleUserNameChange = (event) => {
-        setUserName(event.target.value)
-    }
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
 
-    const handleCommentsChange = (event) => {
-        setComments(event.target.value)
-    }
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value);
+  };
 
-    const handleTopicChange = (event) => {
-        setTopic(event.target.value)
-    }
+  // EmailJS function for sending email with the FORM.
+  const sendMessage = (event) => {
+    event.preventDefault();
 
-    const handleSubmit = event => {
-        alert(`${username} ${comments} ${topic}`)
-        event.preventDefault()
-    }
+    const templateParams = {
+      from_name: name + " (" + email + ")",
+      to_name: "dannebb.10@gmail.com",
+      feedback: message,
+    };
 
+    emailjs.send("service_upq4gtj", "template_ybrb1lo", templateParams).then(
+      function (response) {
+        toast.success("Your message was sent!", {
+          position: toast.POSITION.TOP_CENTER,
+          className: "black-background",
+          bodyClassName: "grow-font-size",
+          progressClassName: "fancy-progress-bar",
+        });
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (err) {
+        toast.error("Your message was not able to be sent", {
+          position: toast.POSITION.TOP_CENTER,
+        });
+        console.log("ERROR!", err.status, err.text);
+      }
+    );
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
+  return (
+    <form className="form-header" onSubmit={sendMessage} method="POST">
+      <div className="form-group">
+        <label className="name">Name</label>
+        <input
+          className="form-message"
+          type="text"
+          placeholder="Enter name please"
+          required
+          value={name}
+          onChange={handleNameChange}
+        ></input>
+      </div>
 
-    return (
-        <form className="form-header" onSubmit={handleSubmit}>
-         <div>
-             <label className="labels">Username</label>
-             <input
-             className="form-input" 
-             type="text" 
-             value={username} 
-             onChange={handleUserNameChange}>    
-             </input>
-         </div>
-         <div>
-             <label className="labels">Comments</label>
-             <textarea
-             className="form-textarea" 
-             value={comments} 
-             onChange={handleCommentsChange}>
-             </textarea>
-         </div>
-         <div>
-             <label className="labels">Topic</label>
-             <select value={topic} onChange={handleTopicChange} className="select-value">
-             <option value="react" className="form-option">React</option>
-             <option value="angular" className="form-option">Angular</option>
-             <option value="vue" className="form-option">Vue</option>
-             </select>
-         </div>
-         <button type="submit" className="btnn">Submit</button>
-                
-        </form>
-        
-    )
-}
+      <div className="form-group">
+        <label className="inputEmail name">Email adress</label>
+        <input
+          className="form-message"
+          type="email"
+          placeholder="Enter email please"
+          required
+          value={email}
+          onChange={handleEmailChange}
+        ></input>
+      </div>
+
+      <div className="form-group">
+        <label className="message name">Message</label>
+        <textarea
+          className="form-message"
+          rows="3"
+          placeholder="Enter message please"
+          required
+          value={message}
+          onChange={handleMessageChange}
+        ></textarea>
+      </div>
+      <button type="submit" className="btnn" onClick={sendMessage}>
+        Submit
+      </button>
+      <ToastContainer />
+    </form>
+  );
+
+  const contextClass = {
+    success: "bg-blue-600",
+    error: "bg-red-600",
+    info: "bg-gray-600",
+    warning: "bg-orange-400",
+    default: "bg-indigo-600",
+    dark: "bg-white-600 font-gray-300",
+  };
+};
 
 export default Form;
