@@ -5,9 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import ReactRouterSetup from './components/ReactRouterSetup';
 
 
+
 ReactDOM.render(
+  <React.StrictMode>
   <ReactRouterSetup>
     <App />
-  </ReactRouterSetup>,
+  </ReactRouterSetup>
+  </React.StrictMode>,
   document.getElementById('root')
 );

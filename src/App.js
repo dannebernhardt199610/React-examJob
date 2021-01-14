@@ -4,13 +4,24 @@ import Data from "./data/Data";
 import Menu from "./components/Menu";
 import Categories from "./components/Categories";
 import Search from "./components/Search";
+import { Navbar } from "./homepage/components/Navbar";
+import GlobalStyle from "./homepage/globalStyles";
+import { Hero } from "./homepage/components/Hero";
+import { SliderData } from "./homepage/data/SliderData";
+import DropDown from "./homepage/components/DropDown";
+import InfoSection from "./homepage/components/InfoSection";
 
 const allCategories = ["all", ...new Set(Data.map((item) => item.category))];
 
 function App() {
   const [items, setItems] = useState(Data);
   const [categories, setCategories] = useState(allCategories);
-  /* Satt på knappt längst ned för att fokusera på en input längst upp på sidan */
+  const [isOpen, setIsOpen] = useState(false)
+
+  //for the DropDown in homepage folder.
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  }
 
   /* filtrerar items om vi trycker all knappen laddar vi alla produkter */
   const filterItems = (category) => {
@@ -35,7 +46,7 @@ function App() {
     setItems(newItems);
   };
 
-  /* gör at sidan ej laddar om när vi trycker på knapparna*/
+  /* gör att sidan ej laddar om när vi trycker på knapparna*/
   useEffect(() => {
     console.log("starting");
   }, []);
@@ -46,15 +57,23 @@ function App() {
         <section className="menu-section">
           <p className="anim-circle"></p>
           <div className="title">
-          <h1> Our Clothes </h1>
+            <h1> Our Clothes </h1>
           </div>
           <div className="underline"></div>
           <Search categories={categories} filterItems={searchItem} />
           <Categories categories={categories} filterItems={filterItems} />
           <Menu items={items} />
           <div className="underline-bottom"></div>
-        </section>
-      </main>
+          </section>
+          </main>
+          <div>
+        <GlobalStyle />
+        <Navbar toggle={toggle}/>
+        <DropDown isOpen={isOpen} toggle={toggle}/>
+        <Hero slides={SliderData} />
+        <InfoSection />
+        </div>
+     
     </>
   );
 }
