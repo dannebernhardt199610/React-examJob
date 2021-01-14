@@ -58,11 +58,11 @@ const HeroSlide = styled.div`
 const HeroImage = styled.img`
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
 `;
+
 const HeroContent = styled.div`
   position: relative;
   z-index: 10;
@@ -130,11 +130,10 @@ export const Hero = ({ slides }) => {
   const length = slides.length;
   const timeout = useRef(null);
 
-
   // slides the images every 3 seconds automatically.
   useEffect(() => {
     const nextSlide = () => {
-      setCurrent(current => (current === length - 1 ? 0 : current + 1));
+      setCurrent((current) => (current === length - 1 ? 0 : current + 1));
     };
 
     timeout.current = setTimeout(nextSlide, 3000);

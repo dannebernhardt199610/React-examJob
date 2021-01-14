@@ -21,8 +21,8 @@ const DropDownContainer = styled.div`
 `;
 
 const Icon = styled.div`
-position:absolute:
-top: 1.2rem;
+position: absolute:
+top: 1.5rem;
 right: 1.5rem;
 background: transparent;
 font-size: 2rem;
@@ -56,7 +56,6 @@ const DropdownLink = styled.div`
   font-size: 1.5rem;
   text-decoration: none;
   list-style: none;
-  color: #fff;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 
@@ -85,7 +84,7 @@ const DropDown = ({ isOpen, toggle }) => {
           ))}
         </DropdownMenu>
         <BtnWrap>
-          <Button primary="true" round="true" big="true" to="/contact">
+          <Button primary="true" round="true" big="true" to="/interested">
             Contact Us
           </Button>
         </BtnWrap>

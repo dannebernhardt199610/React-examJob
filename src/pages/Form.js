@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import emailjs, { init } from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "../components/Navbar";
 init("user_wDDr0OQVCk88Xw4XU1Q4O");
 
 const Form = () => {
@@ -54,47 +55,50 @@ const Form = () => {
   };
 
   return (
-    <form className="form-header" onSubmit={sendMessage} method="POST">
-      <div className="form-group">
-        <label className="form-label-name">Name</label>
-        <input
-          className="form-message"
-          type="text"
-          placeholder="Enter name please"
-          required
-          value={name}
-          onChange={handleNameChange}
-        ></input>
-      </div>
+    <>
+      <Navbar />
+      <form className="form-header" onSubmit={sendMessage} method="POST">
+        <div className="form-group">
+          <label className="form-label-name">Name</label>
+          <input
+            className="form-message"
+            type="text"
+            placeholder="Enter name please"
+            required
+            value={name}
+            onChange={handleNameChange}
+          ></input>
+        </div>
 
-      <div className="form-group">
-        <label className="form-label-name">Email adress</label>
-        <input
-          className="form-message"
-          type="email"
-          placeholder="Enter email please"
-          required
-          value={email}
-          onChange={handleEmailChange}
-        ></input>
-      </div>
+        <div className="form-group">
+          <label className="form-label-name">Email adress</label>
+          <input
+            className="form-message"
+            type="email"
+            placeholder="Enter email please"
+            required
+            value={email}
+            onChange={handleEmailChange}
+          ></input>
+        </div>
 
-      <div className="form-group">
-        <label className="form-label-name">Message</label>
-        <textarea
-          className="form-message form-textarea"
-          rows="3"
-          placeholder="Enter message please"
-          required
-          value={message}
-          onChange={handleMessageChange}
-        ></textarea>
-      </div>
-      <button type="submit" className="btnn" onClick={sendMessage}>
-        Submit
-      </button>
-      <ToastContainer />
-    </form>
+        <div className="form-group">
+          <label className="form-label-name">Message</label>
+          <textarea
+            className="form-message form-textarea"
+            rows="3"
+            placeholder="Enter message please"
+            required
+            value={message}
+            onChange={handleMessageChange}
+          ></textarea>
+        </div>
+        <button type="submit" className="btnn" onClick={sendMessage}>
+          Submit
+        </button>
+        <ToastContainer />
+      </form>
+    </>
   );
 };
 

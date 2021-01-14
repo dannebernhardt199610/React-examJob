@@ -22,7 +22,6 @@ const Navbar = () => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          {/* funkar ej */}
           <button
             className="nav-toggle"
             onClick={() => setShowLinks(!showLinks)}

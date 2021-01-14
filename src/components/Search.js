@@ -1,4 +1,5 @@
 import React, {useRef} from 'react'
+import { AiOutlineFileSearch} from 'react-icons/ai'
 
 
 
@@ -23,7 +24,8 @@ const Search = ( { categories, filterItems} ) => {
            onClick={() => {
              inputRef.current.focus();
            }}>
-             return to search
+             <AiOutlineFileSearch />
+            
            </button>
           
            </div>

@@ -7,7 +7,7 @@ export const SliderData = [
   {
     title: "Space website, clothing website",
     price: "2500 kr",
-    path: "/websites",
+    path: "/starsweb",
     label: "View website",
     image: starsWEB,
     alt: "stars",
