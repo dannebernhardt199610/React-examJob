@@ -9,7 +9,7 @@ const data = [
       title: 'Raincoat',
       category: 'jackets',
       price: 15.99,
-      img: './images/jackets/rainCoat.jpg',
+      img: '../images/jackets/rainCoat.jpg',
       desc: `Keeps you super dry no matter what`,
     },
     {
@@ -144,6 +144,12 @@ const data = [
       id: 3,
       url: '/starsweb',
       text: 'starsweb',
+      icon: <AiOutlineShopping />,
+    },
+    {
+      id: 4,
+      url: '/pizzaweb',
+      text: 'pizzaweb',
       icon: <AiOutlineShopping />,
     },
   ];

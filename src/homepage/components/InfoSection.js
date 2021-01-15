@@ -66,11 +66,12 @@ const ColumnRight = styled.div`
 const InfoSectionRepresentation = styled.div`
   display: flex;
   justify-content: center;
+  text-align: center;
   color: #ff851b;
-  margin: 2.5rem;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 4);
+  margin: 2rem;
+  text-shadow: px 5px 20px rgba(0, 0, 0, 4);
   line-height: 1.4;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   flex-direction: column;
   align-items: center;
 
@@ -90,16 +91,14 @@ const InfoSectionRepresentation = styled.div`
 const InfoSection = ({ infoData }) => {
   return (
     <>
+    <Section>
       <InfoSectionRepresentation>
         <h1>Explore our beautiful websites</h1>
         <p>
-          {" "}
           If you find anything interesting, please contact us. Click{" "}
           <mark>View Website</mark> for navigation and practical usage.
         </p>
       </InfoSectionRepresentation>
-
-      <Section>
         {infoData.map((Item) => (
           <Container>
             <ColumnLeft>

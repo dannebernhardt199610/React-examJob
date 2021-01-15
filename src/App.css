@@ -7,21 +7,19 @@
   --clr-primary-7: hsl(205, 90%, 76%);
 }
 
-
-
 .WelcomePage {
-background-color: #283747;
+  background-color: #283747;
 }
 
 .starsWEB {
   /*background-color: #696969; */
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   background-image: url("stars.jpg");
   background-position: center;
-  width:cover;
-  height:cover;
+  width: cover;
+  height: cover;
   min-width: 100%;
   min-height: 100%;
 }
@@ -32,6 +30,11 @@ background-color: #283747;
   align-items: center;
 }
 
+.paintBlue {
+  background-color: #283747;
+  justify-content: center;
+}
+
 .form-header {
   background-color: #283747;
   display: flex;
@@ -39,17 +42,7 @@ background-color: #283747;
   align-items: center;
   justify-content: center;
   justify-self: center;
-  padding-top: 250px;
-  padding-bottom:50px;
-}
-
-.labels {
-  font-size: 1.5rem;
-  font-family: "Staatliches", cursive;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  color: var(--clr-gold);
+  height: 100vh;
 }
 
 .form-input,
@@ -101,7 +94,7 @@ background-color: #283747;
 }
 
 .item-info {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
   margin-bottom: 0.5rem;
   text-align: center;
@@ -176,6 +169,18 @@ background-color: #283747;
   transition: var(--transition);
   border-radius: var(--radius);
 }
+
+@media screen and (max-width: 480px) {
+  .filter-btn {
+    display: grid;
+    column-gap: 0px;
+    row-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2% 0px 0px;
+    font-size: 0.5rem;
+  }
+}
+
 .filter-btn:hover {
   background: var(--clr-gold);
   color: var(--clr-white);
@@ -204,7 +209,7 @@ input:focus::placeholder {
 }
 
 .return-button {
-  position: fixed; 
+  position: fixed;
   bottom: 0%;
   right: 20%;
   padding: 6px 20px;
@@ -215,16 +220,15 @@ input:focus::placeholder {
   border-top: 0.2px solid var(--clr-gold);
   -webkit-animation: breathing 5s ease-out infinite normal;
   animation: breathing 5s ease-out infinite normal;
-  font-family:'monospace';
+  font-family: "monospace";
   font-size: 30px;
   background: transparent;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   border-radius: 10px;
-  text-align: center;    
-  }
+  text-align: center;
+}
 
-  
 @-webkit-keyframes breathing {
   0% {
     -webkit-transform: scale(0.9);
@@ -303,7 +307,6 @@ input:focus::placeholder {
     padding: auto;
     display: flex;
     justify-content: center;
-    
   }
 
   .links #hidden {
@@ -338,14 +341,13 @@ input:focus::placeholder {
 
 .links a {
   display: grid;
-  color: var(--clr-grey-3);
+
   font-size: 25px;
   padding: 2px;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   position: absolute;
   left: 25%;
-  
 }
 .links a:hover {
   background: var(--clr-gold);
@@ -371,11 +373,6 @@ input:focus::placeholder {
   color: var(--clr-primary-7);
 }
 
-.form-header {
-  display: grid;
-  font-size: 20px;
-}
-
 .form-message {
   font-family: "Staatliches";
   margin: 20px;
@@ -398,6 +395,8 @@ input:focus::placeholder {
   color: var(--clr-gold);
   display: block;
   text-align: center;
+  padding: 20px;
+  letter-spacing: 0.4rem;
 }
 
 .form-textarea {

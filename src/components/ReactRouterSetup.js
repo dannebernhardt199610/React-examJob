@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import WelcomePage from "../pages/WelcomePage";
 import ClothesShop from "../pages/ClothesShop";
 import About from "../pages/About";
+import PizzaShop from "../pages/PizzaShop";
 
 const ReactRouterSetup = () => {
   return (
@@ -24,7 +25,9 @@ const ReactRouterSetup = () => {
         <Route path="/about">
           <About />
         </Route>
-
+        <Route path="/pizzaweb">
+          <PizzaShop />
+        </Route>
         <Route exact path="*">
           <Error />
         </Route>

@@ -9,6 +9,7 @@ export const InfoData = [
     paragraphOne: 'A website for the restaurant enthusiast.',
     paragraphTwo: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, distinctio!',
     buttonLabel: 'View Website',
+    url: '/pizzaweb',
     image: Restaurant,
     reverse: false,
     delay: 100,

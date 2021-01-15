@@ -56,7 +56,9 @@ const Form = () => {
 
   return (
     <>
-      <Navbar />
+    <div className="paintBlue">
+    <Navbar />
+    </div>
       <form className="form-header" onSubmit={sendMessage} method="POST">
         <div className="form-group">
           <label className="form-label-name">Name</label>
