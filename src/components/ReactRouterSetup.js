@@ -16,7 +16,8 @@ const ReactRouterSetup = () => {
         <Route exact path="/">
           <WelcomePage />
         </Route>
-        <Route path="/interested">
+        <Route 
+        path="/interested">
           <Form />
         </Route>
         <Route path="/starsweb">

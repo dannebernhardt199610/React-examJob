@@ -63,16 +63,6 @@
   color: var(--clr-gold);
 }
 
-.btnn {
-  padding: 20px;
-  margin: 20px;
-  color: rgb(12, 235, 108);
-  font-family: "Staayliches", cursive;
-  font-size: 1.5rem;
-  background: transparent;
-  border: none;
-  border-bottom: 4px solid var(--clr-gold);
-}
 
 .btnn:hover {
   background: var(--clr-gold);
@@ -377,7 +367,7 @@ input:focus::placeholder {
   font-family: "Staatliches";
   margin: 20px;
   width: 50vw;
-  height: 3rem;
+  height: 2rem;
   max-width: 400px;
   background-color: transparent;
   max-height: 250px;
@@ -395,12 +385,15 @@ input:focus::placeholder {
   color: var(--clr-gold);
   display: block;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   letter-spacing: 0.4rem;
 }
 
 .form-textarea {
   height: 100px;
+  display: grid;
+  justify-content: center;
+
   border: 2px solid var(--clr-gold);
 }
 
