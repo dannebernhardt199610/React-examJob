@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { AiOutlineMail, AiOutlineHome } from "react-icons/ai";
 import { FaPizzaSlice, FaTshirt } from "react-icons/fa";
+import { MdAddAPhoto } from "react-icons/md";
 
 const data = [
   {
@@ -152,6 +153,12 @@ export const links = [
     url: "/pizzaweb",
     text: "pizzaweb",
     icon: <FaPizzaSlice />,
+  },
+  {
+    id: 5,
+    url: "/photoweb",
+    text: "photoweb",
+    icon: <MdAddAPhoto />,
   },
 ];
 

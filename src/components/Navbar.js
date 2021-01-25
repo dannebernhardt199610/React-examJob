@@ -35,7 +35,6 @@ const Navbar = () => {
                 const { id, url, icon, text } = link;
                 return (
                   <li
-                    className="nav-item"
                     key={id}
                     id={showLinks ? "" : "hidden"}
                   >

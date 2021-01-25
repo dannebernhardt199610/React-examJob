@@ -8,6 +8,7 @@ import WelcomePage from "../pages/WelcomePage";
 import ClothesShop from "../pages/ClothesShop";
 import About from "../pages/About";
 import PizzaShop from "../pages/PizzaShop";
+import PhotoShop from "../pages/PhotoShop";
 
 const ReactRouterSetup = () => {
   return (
@@ -28,6 +29,9 @@ const ReactRouterSetup = () => {
         </Route>
         <Route path="/pizzaweb">
           <PizzaShop />
+        </Route>
+        <Route path="/photoweb">
+          <PhotoShop />
         </Route>
         <Route exact path="*">
           <Error />

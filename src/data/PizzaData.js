@@ -7,7 +7,7 @@ const data = [
     {
       id: 1,
       title: 'capricciosa',
-      category: 'capricciosa',
+      category: 'cheese',
       price: 15.99,
       img: '../images/pizza/capricciosa.jpg',
       desc: `capricciosa made from heaven`,
@@ -15,7 +15,7 @@ const data = [
     {
         id: 2,
         title: 'azteka',
-        category: 'azteka',
+        category: 'cheese',
         price: 15.99,
         img: '../images/pizza/azteka.jpg',
         desc: `azteka made from heaven`,
@@ -23,7 +23,7 @@ const data = [
       {
         id: 3,
         title: 'basilika',
-        category: 'basilika',
+        category: 'vegetarian',
         price: 15.99,
         img: '../images/pizza/basilika.jpg',
         desc: `basilika pizza made from heaven`,
@@ -31,7 +31,7 @@ const data = [
       {
         id: 4,
         title: 'cheese-ham',
-        category: 'cheese-ham',
+        category: 'cheese',
         price: 15.99,
         img: '../images/pizza/cheese-ham.jpg',
         desc: `cheese-ham made from heaven`,
@@ -52,7 +52,6 @@ const data = [
         img: '../images/pizza/sausage-ham.jpg',
         desc: `sausage-ham made from heaven`,
       },
-
 ]
 
 export default data;
