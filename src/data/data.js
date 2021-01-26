@@ -39,11 +39,11 @@ const data = [
   },
   {
     id: 5,
-    title: "blue jeans Woman",
+    title: "cool jeans Woman",
     category: "jeans",
-    price: 22.99,
-    img: "../images/jeans/blueJeansWoman.jpg",
-    desc: `skinny fk`,
+    price: 12.99,
+    img: "./images/jeans/womansJeans.jpg",
+    desc: `womans jeans`,
   },
   {
     id: 6,
@@ -63,11 +63,11 @@ const data = [
   },
   {
     id: 8,
-    title: "cool jeans Woman",
+    title: "blue jeans Woman",
     category: "jeans",
-    price: 12.99,
-    img: "./images/jeans/womansJeans.jpg",
-    desc: `womans jeans`,
+    price: 22.99,
+    img: "../images/jeans/blueJeansWoman.jpg",
+    desc: `skinny fk`,
   },
   {
     id: 9,
