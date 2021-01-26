@@ -23,7 +23,7 @@ export const SliderData = [
   {
     title: "Photograph website",
     price: "2500 kr",
-    path: "/websites",
+    path: "/photoweb",
     label: "View website",
     image: camera,
     alt: "camera",

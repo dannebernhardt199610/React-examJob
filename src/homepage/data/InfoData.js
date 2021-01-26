@@ -19,6 +19,7 @@ export const InfoData = [
     paragraphOne: 'A website for the photograph enthusiast.',
     paragraphTwo: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, distinctio!',
     buttonLabel: 'View Website',
+    url: '/photoweb',
     image: Photo,
     reverse: false,
     delay: 200,

@@ -78,6 +78,7 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   justify-content: center;
+  padding-top: 50px;
   width: 100%;
   max-width: 200px;
   gap: 1rem;
@@ -363,6 +364,11 @@ input:focus::placeholder {
   padding: auto;
   -webkit-animation: breathing 5s ease-out infinite normal;
   animation: breathing 5s ease-out infinite normal;
+}
+
+.read-more-less--more,
+.read-more-less--less {
+  color: red;
 }
 
 .social-icons a {

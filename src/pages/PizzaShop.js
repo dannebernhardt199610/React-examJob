@@ -18,6 +18,7 @@ import Navbar from "../components/Navbar";
     height: cover;
     min-width: 100%;
     min-height: 100%;
+    
 
     @media screen and (max-width: 480px) {
       padding: 0;
@@ -87,7 +88,7 @@ const PizzaShop = () => {
     <Background>
       <Navbar />
       <section className="menu-section">
-        <Title>Pizzas</Title>
+        <Title>Pizza</Title>
         <Search categories={categories} filterItems={searchItem} />
         <Categories categories={categories} filterItems={filterItems} />
         <Menu items={items} />
