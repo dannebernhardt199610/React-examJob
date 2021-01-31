@@ -39,11 +39,11 @@ const data = [
   },
   {
     id: 5,
-    title: "cool jeans Woman",
+    title: "cool jeans",
     category: "jeans",
     price: 12.99,
     img: "./images/jeans/womansJeans.jpg",
-    desc: `womans jeans`,
+    desc: `cool jeans`,
   },
   {
     id: 6,

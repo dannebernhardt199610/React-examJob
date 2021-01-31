@@ -16,8 +16,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("stars.jpg");
-  background-position: center;
+  background-image: url("fallingStar.jpg");
   width: cover;
   height: cover;
   min-width: 100%;
@@ -229,6 +228,14 @@ input:focus::placeholder {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .return-button {
+  font-size: 10px;
+  right: 5%;
+  bottom: 0;
+  }
+}
+
 @-webkit-keyframes breathing {
   0% {
     -webkit-transform: scale(0.9);
@@ -288,17 +295,14 @@ input:focus::placeholder {
   box-shadow: 25px 10px 0px 0px #fff;
 }
 
-@media screen and (max-width: 480px) {
-  .social-icons {
-    display: none;
-    visibility: hidden;
-  }
+
 
   .anim-circle {
     display: none;
     visibility: hidden;
   }
-}
+
+
 
 @media screen and (min-width: 200px) {
   .nav-header {
@@ -307,16 +311,7 @@ input:focus::placeholder {
     padding: auto;
     display: flex;
     justify-content: center;
-  }
-
-  .links #hidden {
-    position: absolute;
-    overflow: hidden;
-    display: grid;
-    padding: auto;
-    margin: 5px;
-    max-height: 230px;
-    width: 100%;
+    margin-bottom: 50px;
   }
 }
 
@@ -337,25 +332,47 @@ input:focus::placeholder {
   transform: rotate(20deg);
 }
 
-.links-container {
-  height: auto !important;
-}
 
 
-.links a {
+.links {
+  list-style-type: none;
   display: flex;
-  flex-direction: row;
-  margin: 10px;
-  font-size: 30px;
+  font-size: 35px;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   position: absolute;
   left: 25%;
+  overflow: hidden;
+  gap: 10px;
+  margin: 10px;
+  padding: 0;
 }
-.links a:hover {
+
+.links:hover {
   background: var(--clr-gold);
   color: var(--clr-white);
   transition: var(--transition);
+}
+
+@media screen and (min-width: 200px) {
+.links #hidden {
+  position: absolute;
+  overflow: hidden;
+  display: grid;
+  margin: 5px;
+  max-height: 230px;
+  width: 100%;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .links {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+  }
 }
 
 .social-icons {
@@ -366,10 +383,6 @@ input:focus::placeholder {
   animation: breathing 5s ease-out infinite normal;
 }
 
-.read-more-less--more,
-.read-more-less--less {
-  color: red;
-}
 
 .social-icons a {
   font-size: 3rem;
@@ -379,6 +392,15 @@ input:focus::placeholder {
 }
 .social-icons a:hover {
   color: var(--clr-primary-7);
+}
+
+@media screen and (max-width: 768px) {
+  .social-icons {
+   position: absolute;
+   top: 0;
+   left: 0;
+   padding: 5px;
+  }
 }
 
 .form-message {
