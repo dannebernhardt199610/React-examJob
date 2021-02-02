@@ -1,41 +1,31 @@
-import React, {useRef} from 'react'
+import React, { useRef } from "react";
+import { AiOutlineFileSearch } from "react-icons/ai";
 
-
-
-const Search = ( { categories, filterItems} ) => {
-    const inputRef = useRef()
-    return (
+const Search = ({ categories, filterItems }) => {
+  const inputRef = useRef();
+  return (
+    <div>
       <div>
-
-        <div>
-          <input
+        <input
           className="search-input"
           ref={inputRef}
           placeholder="search"
-          onChange={(e) => {filterItems(e.target.value)}}
+          onChange={(e) => {
+            filterItems(e.target.value);
+          }}
+        ></input>
+      </div>
 
-          >
+      <button
+        className="return-button"
+        onClick={() => {
+          inputRef.current.focus();
+        }}
+      >
+        <AiOutlineFileSearch />
+      </button>
+    </div>
+  );
+};
 
-          </input>
-        </div>
-        
-        <button className="return-button"
-           onClick={() => {
-             inputRef.current.focus();
-           }}>
-             return to search
-           </button>
-          
-           </div>
-          
-           )
-          }
-         
-            
-
-     
-         
-     
-  
-
-export default Search
+export default Search;
