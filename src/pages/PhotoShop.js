@@ -4,7 +4,6 @@ import Menu from "../components/Menu";
 import Categories from "../components/Categories";
 import Search from "../components/Search";
 import styled from "styled-components";
-import pizzaImage from "./images/pizzaa.jpg";
 import photoImage from "./photoImages/photo-background.jpg";
 import Navbar from "../components/Navbar";
 
@@ -65,13 +64,9 @@ const PhotoPage = () => {
   };
 
   /* sök på en specifik vara */
-  const searchItem = (category) => {
-    if (category === "") {
-      setItems(Data);
-      return;
-    }
-    const newItems = Data.filter(
-      (item) => item.title.toLowerCase() === category
+  const searchItem = (title) => {
+    const newItems = items.filter(
+      (item) => item.title.toLowerCase() === title
     );
     setItems(newItems);
   };

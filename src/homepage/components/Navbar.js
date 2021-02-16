@@ -80,14 +80,14 @@ const NavBtn = styled.div`
 
 export const Navbar = ({ toggle }) => {
 
- const moveDown = (e) => {
+ const moveDown = () => {
     let pageHeight = window.innerHeight;
     window.scrollBy(0, pageHeight);
   }
 
   return (
     <Nav>
-      <Logo to="/">Cheap web Rentals</Logo>
+      <Logo to="/">Cheap web sites</Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         <Logo onClick={moveDown}>Websites</Logo>

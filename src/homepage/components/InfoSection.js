@@ -95,7 +95,9 @@ const InfoSection = ({ infoData }) => {
       <InfoSectionRepresentation>
         <h1>Explore our beautiful websites</h1>
         <p>
-          If you find anything interesting, please contact us. Click{" "}
+          If you find anything interesting, please contact us. 
+          <br />
+          Click{" "}
           <mark>View Website</mark> for navigation and practical usage.
         </p>
       </InfoSectionRepresentation>
