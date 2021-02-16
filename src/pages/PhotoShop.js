@@ -38,6 +38,7 @@ const Title = styled.div`
     justify-content: center;
     padding: 1.5rem;
     font-weight: bold;
+    text-shadow: 2px 2px cyan;
     color: white;
 
     @media screen and (max-width: 480px) {

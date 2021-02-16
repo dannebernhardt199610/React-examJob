@@ -7,11 +7,11 @@ import { MdAddAPhoto } from "react-icons/md";
 const data = [
   {
     id: 1,
-    title: "blue Cap",
+    title: "Blue Cap",
     category: "caps",
     price: 6.99,
     img: "./images/caps/blueCap.jpg",
-    desc: `a blue cap`,
+    desc: `A blue cap`,
   },
   {
     id: 2,
@@ -23,11 +23,11 @@ const data = [
   },
   {
     id: 3,
-    title: "Light blue Jeans Man",
+    title: "Light blue Jeans",
     category: "jeans",
     price: 6.99,
     img: "./images/jeans/blueJeansMan.jpg",
-    desc: `blue jeans`,
+    desc: `Light blue jeans man`,
   },
   {
     id: 4,
@@ -35,11 +35,11 @@ const data = [
     category: "jackets",
     price: 20.99,
     img: "./images/jackets/beigeJacket.jpg",
-    desc: `beige jacket `,
+    desc: `A beige jacket`,
   },
   {
     id: 5,
-    title: "cool jeans",
+    title: "Cool jeans",
     category: "jeans",
     price: 12.99,
     img: "./images/jeans/womansJeans.jpg",
@@ -47,27 +47,27 @@ const data = [
   },
   {
     id: 6,
-    title: "different color jeans",
+    title: "Different color jeans",
     category: "jeans",
     price: 18.99,
     img: "./images/jeans/differentColorJeans.jpg",
-    desc: `choose between different colors`,
+    desc: `Choose between different colors`,
   },
   {
     id: 7,
-    title: "Gray jeans Man",
+    title: "Gray jeans",
     category: "jeans",
     price: 8.99,
     img: "./images/jeans/grayJeansMan.jpg",
-    desc: `send cap `,
+    desc: `Gray jeans man`,
   },
   {
     id: 8,
-    title: "blue jeans Woman",
+    title: "Blue jeans",
     category: "jeans",
     price: 22.99,
     img: "../images/jeans/blueJeansWoman.jpg",
-    desc: `skinny fk`,
+    desc: `Blue jeans for woman`,
   },
   {
     id: 9,
@@ -75,7 +75,7 @@ const data = [
     category: "jackets",
     price: 16.99,
     img: "./images/jackets/skinJacket.jpg",
-    desc: `jacket`,
+    desc: `Skin jacket`,
   },
   {
     id: 10,
@@ -83,24 +83,24 @@ const data = [
     category: "jackets",
     price: 15.99,
     img: "../images/jackets/rainCoat.jpg",
-    desc: `Keeps you super dry no matter what`,
+    desc: `Keeps you dry no matter what`,
   },
 
   {
     id: 11,
-    title: "Ohana blue Cap",
+    title: "Ohana blue cap",
     category: "caps",
     price: 6.99,
     img: "./images/caps/ohanaCap.jpg",
-    desc: `a blue cap`,
+    desc: `Ohana blue cap`,
   },
   {
     id: 12,
-    title: "Worthy black/blue Cap",
+    title: "Worthy black n blue cap",
     category: "caps",
     price: 6.99,
     img: "./images/caps/worthyCap.jpg",
-    desc: `a black and blue cap`,
+    desc: `A black and blue cap`,
   },
   {
     id: 13,
@@ -108,7 +108,7 @@ const data = [
     category: "caps",
     price: 10.99,
     img: "./images/caps/whiteCap.jpg",
-    desc: "a white cap",
+    desc: "A white cap",
   },
   {
     id: 14,
@@ -124,7 +124,7 @@ const data = [
     category: "caps",
     price: 10.99,
     img: "./images/caps/brixtonCap.jpg",
-    desc: "a black Brixton cap",
+    desc: "A black Brixton cap",
   },
 ];
 export default data;

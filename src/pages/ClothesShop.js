@@ -47,7 +47,7 @@ const ClothesShop = () => {
         <section className="menu-section">
           <p className="anim-circle"></p>
           <div className="title">
-            <h1> Our Clothes </h1>
+            <h1> Clothes</h1>
           </div>
           <div className="underline"></div>
           <Search categories={categories} filterItems={searchItem} />

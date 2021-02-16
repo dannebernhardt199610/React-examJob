@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&display=swap');
 
 :root {
   --clr-gold: #c59d5f;
   --transition: all 0.6s linear;
   --clr-primary-5: hsl(205, 78%, 60%);
   --clr-primary-7: hsl(205, 90%, 76%);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px rgb(107, 120, 230) inset !important;
 }
 
 .WelcomePage {
@@ -62,7 +70,6 @@
   color: var(--clr-gold);
 }
 
-
 .btnn:hover {
   background: var(--clr-gold);
   color: var(--clr-white);
@@ -96,22 +103,21 @@
 
 .photo {
   display: grid;
-  grid-template-columns: 2fr 2fr;
   object-fit: cover;
-  height: 300px;
-  width: 400px;
+  max-height: 00px;
+  min-height: 400px;
+  max-width: 500px;
+  min-width: 500px;
   border: 0.25rem solid var(--clr-gold);
-  border-radius: var(--radius);  
+  border-radius: var(--radius);
 }
 
-  @media screen and (max-width: 768px) {
-    .photo {
+@media screen and (max-width: 768px) {
+  .photo {
     width: 200px;
     height: 100px;
-    }
+  }
 }
-
-
 
 .item-text {
   margin-bottom: 1rem;
@@ -119,9 +125,10 @@
 }
 
 .title h1 {
-  font-family: "Staatliches", "Times New Roman", Times, serif;
+  font-family: 'Playfair Display', serif;
   display: flex;
-  font-size: 4.5rem;
+  font-size: 6rem;
+  text-shadow: 2px 2px #FF0000;
   text-align: center;
   justify-content: center;
   margin: 0;
@@ -230,9 +237,9 @@ input:focus::placeholder {
 
 @media screen and (max-width: 768px) {
   .return-button {
-  font-size: 10px;
-  right: 5%;
-  bottom: 0;
+    font-size: 10px;
+    right: 5%;
+    bottom: 0;
   }
 }
 
@@ -295,14 +302,10 @@ input:focus::placeholder {
   box-shadow: 25px 10px 0px 0px #fff;
 }
 
-
-
-  .anim-circle {
-    display: none;
-    visibility: hidden;
-  }
-
-
+.anim-circle {
+  display: none;
+  visibility: hidden;
+}
 
 @media screen and (min-width: 200px) {
   .nav-header {
@@ -332,8 +335,6 @@ input:focus::placeholder {
   transform: rotate(20deg);
 }
 
-
-
 .links {
   list-style-type: none;
   display: flex;
@@ -355,14 +356,14 @@ input:focus::placeholder {
 }
 
 @media screen and (min-width: 200px) {
-.links #hidden {
-  position: absolute;
-  overflow: hidden;
-  display: grid;
-  margin: 5px;
-  max-height: 230px;
-  width: 100%;
-}
+  .links #hidden {
+    position: absolute;
+    overflow: hidden;
+    display: grid;
+    margin: 5px;
+    max-height: 230px;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -383,7 +384,6 @@ input:focus::placeholder {
   animation: breathing 5s ease-out infinite normal;
 }
 
-
 .social-icons a {
   font-size: 3rem;
   margin: 0 0.5rem;
@@ -396,30 +396,32 @@ input:focus::placeholder {
 
 @media screen and (max-width: 768px) {
   .social-icons {
-   position: absolute;
-   top: 0;
-   left: 0;
-   padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
   }
 }
 
 .form-message {
-  font-family: "Staatliches";
-  margin: 20px;
+  font-family: 'Playfair Display', serif;
+  margin: 10px;
   width: 50vw;
   height: 2rem;
   max-width: 400px;
   background-color: transparent;
   max-height: 250px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: grid;
   text-align: center;
-  border: none;
+  color:white;
+  border: 2px solid orange;
+  border-radius: 8px;
   border-bottom: 4px solid var(--clr-gold);
 }
 
 .form-label-name {
-  font-family: "Staatliches";
+  font-family: 'Playfair Display', serif;
   font-weight: bolder;
   font-size: 30px;
   color: var(--clr-gold);
@@ -428,6 +430,8 @@ input:focus::placeholder {
   padding: 10px;
   letter-spacing: 0.4rem;
 }
+
+
 
 .form-textarea {
   height: 100px;

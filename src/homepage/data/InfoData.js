@@ -7,7 +7,7 @@ export const InfoData = [
 {
     heading: 'Restaurant website',
     paragraphOne: 'A website for the restaurant enthusiast.',
-    paragraphTwo: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, distinctio!',
+    paragraphTwo: 'Want to stand out with your delicious pizzas? We have a very awesome website ready for just that! Do not hesitate to visit our example below.',
     buttonLabel: 'View Website',
     url: '/pizzaweb',
     image: Restaurant,
@@ -17,7 +17,7 @@ export const InfoData = [
 {
     heading: 'Photograph website',
     paragraphOne: 'A website for the photograph enthusiast.',
-    paragraphTwo: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, distinctio!',
+    paragraphTwo: 'What is more important between having a great website and great photos? We could not choose so we thought combining them is the answer! Do not hesitate to visit our example below.!',
     buttonLabel: 'View Website',
     url: '/photoweb',
     image: Photo,
@@ -27,7 +27,7 @@ export const InfoData = [
 {
     heading: 'Clothing website',
     paragraphOne: 'A website for the clothing enthusiast.',
-    paragraphTwo: 'Lorem ipsum dolor sit,',
+    paragraphTwo: "Want to market ur clothing brand? Why don't you do it in style? We got style. Do not hesitate to visit our example below.",
     buttonLabel: 'View Website',
     url: '/starsweb',
     image: Clothing,

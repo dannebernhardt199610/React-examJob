@@ -4,8 +4,9 @@ import Menu from "../components/Menu";
 import Categories from "../components/Categories";
 import Search from "../components/Search";
 import styled from "styled-components";
-import pizzaImage from "./images/pizzaa.jpg";
+import pizzaImage from "./images/redpizza.jpg";
 import Navbar from "../components/Navbar";
+
 
 
   //Styled components
@@ -41,6 +42,7 @@ import Navbar from "../components/Navbar";
     padding: 1.5rem;
     font-weight: bold;
     color: #b10dc9;
+    text-shadow: 2px 2px #FF0000;
 
     @media screen and (max-width: 480px) {
       font-size: 2rem;
