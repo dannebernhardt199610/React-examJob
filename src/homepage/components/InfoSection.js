@@ -30,6 +30,7 @@ const ColumnLeft = styled.div`
   line-height: 1.4;
   padding: 1rem 2rem;
   order: ${({ reverse }) => (reverse ? "2" : "1")};
+  margin-top: 20vh;
 
   h1 {
     color: white;
