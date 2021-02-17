@@ -1,7 +1,7 @@
 import camera from '../images/camera.jpg';
 import pizza from '../images/pizzaa.jpg';
 import starsWEB from '../images/clothingg.jpg';
-import steak from '../images/steak.jpg';
+
 
 export const SliderData = [
   {

@@ -40,7 +40,7 @@ const Info = styled.div`
   }
 `;
 
-const CustomP = styled.p`
+const CustomP = styled.div`
   text-align: center;
   font-size: 1.1rem;
   font-weight: 700;

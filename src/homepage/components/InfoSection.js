@@ -165,15 +165,15 @@ const InfoSection = ({ infoData }) => {
             <ImArrowDown onClick={moveDown} />
           </ArrowDown>
         </InfoSectionRepresentation>
-        {infoData.map((Item) => (
-          <Container>
+        {infoData.map((Item, index) => (
+          <Container key={index}>
             <ColumnLeft>
               <h1>{Item.heading}</h1>
               <p>{Item.paragraphOne}</p>
               <p>
                 <small>{Item.paragraphTwo}</small>
               </p>
-              <Button to={Item.url} primary="true">
+              <Button to={Item.url} primary="true" >
                 {Item.buttonLabel}
               </Button>
             </ColumnLeft>

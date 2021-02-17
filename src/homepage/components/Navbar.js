@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styled, { css } from "styled-components/macro";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { menuData } from "../data/MenuData";
+import { NavData } from "../data/NavData";
 import { Button } from "./Button";
 
 const Nav = styled.nav`
@@ -13,7 +13,13 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+  
+  }
 `;
+
+
 
 const NavLink = css`
   color: white;
@@ -27,9 +33,13 @@ const NavLink = css`
   &:hover {
     color: #ffc000;
   }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
-const Logo = styled(Link)`
+const Logo = styled.div`
   ${NavLink}
   font-style: italic;
 
@@ -51,6 +61,7 @@ const MenuBars = styled(AiOutlineMenu)`
     right: 0;
     top: 0;
     transform: translate(-50%, 25%);
+    color: snow;
   }
 `;
 
@@ -79,20 +90,26 @@ const NavBtn = styled.div`
 `;
 
 export const Navbar = ({ toggle }) => {
+ const inputref = useRef();
 
  const moveDown = () => {
     let pageHeight = window.innerHeight;
     window.scrollBy(0, pageHeight);
   }
 
+  
+
   return (
+    <div ref={inputref}>
     <Nav>
-      <Logo to="/">Cheap web sites</Logo>
+      <Logo to="/" onClick= {() => {
+        inputref.current.scrollIntoView()
+      }}> Cheap web sites </Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         <Logo onClick={moveDown}>Websites</Logo>
-        {menuData.map((item, index) => (
-          <NavMenuLinks to={item.link} key={index}>
+        {NavData.map((item, index) => (
+          <NavMenuLinks to={item.path} key={index}>
             {item.title}
           </NavMenuLinks>
         ))}
@@ -103,5 +120,6 @@ export const Navbar = ({ toggle }) => {
         </Button>
       </NavBtn>
     </Nav>
+    </div>
   );
 };

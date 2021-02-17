@@ -1,6 +1,5 @@
 import React from "react";
 import Form from "../pages/Form";
-import Navbar from "./Navbar";
 import Error from "../pages/Error";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";

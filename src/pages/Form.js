@@ -4,11 +4,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import backgroundImage from "./images/mailBox.jpg";
 init("user_wDDr0OQVCk88Xw4XU1Q4O");
 
 const Background = styled.div`
-  background-color: black;
+  background-color: #007cc7;
   top: 0;
   left: 0;
   width: 50vw;
@@ -23,7 +22,7 @@ const Background = styled.div`
 `;
 
 const Container = styled.div`
-background-color: #283747;
+  background-color: #283747;
 `;
 
 const Button = styled.div`
@@ -35,6 +34,7 @@ const Button = styled.div`
   text-align: center;
   font-family: monospace;
   cursor: pointer;
+  transition: 650ms ease;
 
   &:hover {
     background-color: #00fa9a;

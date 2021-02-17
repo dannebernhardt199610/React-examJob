@@ -51,7 +51,7 @@ const PhotoPage = () => {
   const allCategories = ["all", ...new Set(Data.map((item) => item.category))];
 
   const [items, setItems] = useState(Data);
-  const [categories, setCategories] = useState(allCategories);
+  const [categories] = useState(allCategories);
 
   /* filtrerar items om vi trycker all knappen laddar vi alla produkter */
   const filterItems = (category) => {

@@ -13,6 +13,7 @@ export const InfoData = [
     image: Restaurant,
     reverse: false,
     delay: 100,
+    id: 1,
 },
 {
     heading: 'Photograph website',
@@ -23,6 +24,7 @@ export const InfoData = [
     image: Photo,
     reverse: false,
     delay: 200,
+    id: 2,
 },
 {
     heading: 'Clothing website',
@@ -33,6 +35,7 @@ export const InfoData = [
     image: Clothing,
     reverse: false,
     delay: 300,
+    id: 3,
 },
 ]
 

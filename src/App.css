@@ -12,7 +12,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  box-shadow: 0 0 0 30px rgb(107, 120, 230) inset !important;
+  box-shadow: 0 0 0 30px #4DA8DA inset !important;
 }
 
 .WelcomePage {
@@ -104,18 +104,19 @@ input:-webkit-autofill:active {
 .photo {
   display: grid;
   object-fit: cover;
-  max-height: 00px;
-  min-height: 400px;
-  max-width: 500px;
-  min-width: 500px;
+  height: 450px;
+  max-height: 500px;
+  width: 400px;
+  max-width: 700px;
   border: 0.25rem solid var(--clr-gold);
   border-radius: var(--radius);
 }
 
 @media screen and (max-width: 768px) {
   .photo {
-    width: 200px;
-    height: 100px;
+    border: 0.15rem solid rgb(175, 125, 125);
+    max-width: 200px;
+    max-height: 150px;
   }
 }
 
@@ -136,6 +137,11 @@ input:-webkit-autofill:active {
   color: var(--clr-gold);
 }
 
+@media screen and (max-width: 768px) {
+  .title h1{
+  font-size: 3rem;
+}
+}
 .underline {
   width: 15rem;
   height: 0.3rem;
@@ -216,7 +222,7 @@ input:focus::placeholder {
 
 .return-button {
   position: fixed;
-  bottom: 0%;
+  bottom: 0;
   right: 20%;
   padding: 6px 20px;
   size: 20px;
@@ -237,9 +243,9 @@ input:focus::placeholder {
 
 @media screen and (max-width: 768px) {
   .return-button {
-    font-size: 10px;
-    right: 5%;
-    bottom: 0;
+    font-size: 20px;
+    right: 1.5%;
+    bottom: 1%;
   }
 }
 
@@ -384,6 +390,13 @@ input:focus::placeholder {
   animation: breathing 5s ease-out infinite normal;
 }
 
+@media screen and (max-width: 768px) {
+  .social-icons {
+  top: 5px;
+  left: -40px;
+}
+}
+
 .social-icons a {
   font-size: 3rem;
   margin: 0 0.5rem;
@@ -395,11 +408,12 @@ input:focus::placeholder {
 }
 
 @media screen and (max-width: 768px) {
-  .social-icons {
-    position: absolute;
+  .social-icons a {
+    position: relative;
+    left: 15px;
     top: 0;
-    left: 0;
-    padding: 5px;
+    margin: 5px;
+    font-size: 1.5rem;
   }
 }
 
@@ -409,26 +423,41 @@ input:focus::placeholder {
   width: 50vw;
   height: 2rem;
   max-width: 400px;
-  background-color: transparent;
+  background-color: #12232E;
   max-height: 250px;
   font-size: 1rem;
   display: grid;
   text-align: center;
-  color:white;
-  border: 2px solid orange;
-  border-radius: 8px;
-  border-bottom: 4px solid var(--clr-gold);
+  color:whitesmoke;
+  outline: 2px solid #4DA8DA;
+  box-shadow: 0 0 3pt 5pt #4DA8DA;
+
+  transition: outline-offset 250ms ease;
+}
+
+.form-message:hover,
+.form-message:focus {
+  outline-color: #4DA8DA;
+  outline-offset: 6px;
+ 
+}
+
+@media screen and (max-width: 768px) {
+  .form-message {
+  display: grid;
+  width: 300px;
+}
 }
 
 .form-label-name {
   font-family: 'Playfair Display', serif;
   font-weight: bolder;
-  font-size: 30px;
-  color: var(--clr-gold);
+  font-size: 20px;
+  color: #283747;
   display: block;
   text-align: center;
-  padding: 10px;
-  letter-spacing: 0.4rem;
+  padding: 5px;
+  letter-spacing: 0.2rem;
 }
 
 
@@ -437,8 +466,7 @@ input:focus::placeholder {
   height: 100px;
   display: grid;
   justify-content: center;
-
-  border: 2px solid var(--clr-gold);
+  text-align: center;
 }
 
 .form-textarea:focus::placeholder {
