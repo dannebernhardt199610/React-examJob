@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { menuData } from "../data/MenuData";
 import { Button } from "./Button";
-import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 
 const DropDownContainer = styled.div`
@@ -10,7 +9,7 @@ const DropDownContainer = styled.div`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #cd853f;
+  background: cyan;
   display: grid;
   align-items: center;
   top: 0;
@@ -32,37 +31,24 @@ outline:none;
 
 const CloseIcon = styled(FaTimes)`
   color: #000d1a;
+  position: absolute;
+  left: 45%;
+  top:15%;
 `;
 
 const DropdownWrapper = styled.div``;
 
 const DropdownMenu = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 80px);
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin-bottom: 4rem;
-
-  @mediva screen and (max-width: 480px) {
-    grid-template-rows: repeat(4, 60px);
-  }
-`;
-
-const DropdownLink = styled.div`
-  display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  list-style: none;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
 
-  &:hover {
-    color: #000d1a;
-  }
 `;
+
+
+
 
 const BtnWrap = styled.div`
   display: flex;
@@ -78,9 +64,9 @@ const DropDown = ({ isOpen, toggle }) => {
       <DropdownWrapper>
         <DropdownMenu>
           {menuData.map((item, index) => (
-            <DropdownLink to={item.link} key={index}>
+            <Button to={item.path} key={index}>
               {item.title}
-            </DropdownLink>
+            </Button>
           ))}
         </DropdownMenu>
         <BtnWrap>

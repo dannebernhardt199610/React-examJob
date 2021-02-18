@@ -1,8 +1,3 @@
-import React from 'react';
-import { FaFacebook, FaTwitter } from 'react-icons/fa';
-import { AiOutlineForm, AiOutlineHome, AiOutlineShopping } from "react-icons/ai";
-
-
 const data = [
     {
       id: 1,

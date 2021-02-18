@@ -4,22 +4,43 @@ import Navbar from "../components/Navbar";
 import { Button } from "../homepage/components/Button";
 import GlobalStyle from "../homepage/components/globalStyles";
 import { AiOutlineArrowDown } from 'react-icons/ai'
+import { FaRegSmileWink } from 'react-icons/fa'
+
+const InfoContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: lightblue;
+height: 500px;
+`;
 
 const Info = styled.div`
   text-align: center;
+  justify-content: center;
   font-size: 1.5rem;
   padding: 4rem;
   margin: 3rem;
   font-weight: 700;
   color: white;
-
+  line-height: 40px;
+  margin: 0 0 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 40vw;
+  
+  
 
   @media screen and (max-width: 768px) {
-      font-size: 1rem;
+      font-size: 0.8rem;
+      line-height: 20px;
+      width: 100%;
+      height: 100%;
+
   }
 `;
 
-const CustomP = styled.p`
+const CustomP = styled.div`
   text-align: center;
   font-size: 1.1rem;
   font-weight: 700;
@@ -27,6 +48,7 @@ const CustomP = styled.p`
   padding: 1rem;
   padding-top: 0;
   position: center;
+
 
   @media screen and (max-width: 768px) {
     font-size: 0.8rem;
@@ -49,12 +71,31 @@ const Backgrounds = styled.div`
 `;
 
 const CustomButton = styled.div`
-
 display: flex;
 align-items: center;
 justify-content: center;
+`;
 
-`
+const ArrowDown = styled.div`
+padding: 0;
+margin: 0;
+font-size: 5rem;
+color: white;
+text-align: center;
+`;
+
+const Headline = styled.div`
+font-size: 3rem;
+text-align: center;
+margin-top: 20px;
+
+
+@media screen and (max-width: 768px) {
+  font-size: 2rem;
+}
+`;
+
+
 
 const About = () => {
   useEffect(() => {
@@ -65,23 +106,26 @@ const About = () => {
     <Backgrounds>
       <Navbar />
       <GlobalStyle />
+      <InfoContainer>
       <Info>
-        Hey there, <br />
+        <Headline>Hey there <FaRegSmileWink /></Headline> <br /> <br />
         Are you looking for a website for your business? We are highly focused
-        on small companies and startups. Our websites offer the latest
-        technologies and are built with React js. That means that the website is
-        able to change data without reloading the page. Giving you the fastest
-        user experience.
-        <br />
-        <br />
-        <AiOutlineArrowDown />
+        on small companies and startups. Our websites 
+        are built with React js. Giving your customers the fastest
+        user experience. <br />
+        Please do not hestitate to get in touch with us, we can implement any business into our websites and we can make small adjustments for your company if needed.
+    
       </Info>
+      </InfoContainer>
+      <ArrowDown>
+      <AiOutlineArrowDown />
+      </ArrowDown>
      
       <br />
       <CustomP>
-        If you are interested in getting started with us. Don't hesitate to
-        contact us by email or phone. You will find our contact information by
-        hitting<CustomButton><Button to="/interested">Contact us</Button></CustomButton>or the link navigated in the top right of the homepage.
+        We truly hope you enjoyed your visit and wants to get started with us.
+        You will find our contact information by
+        hitting<CustomButton><Button to="/interested">Contact us</Button></CustomButton>
       </CustomP>
     </Backgrounds>
   );

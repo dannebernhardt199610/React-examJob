@@ -10,6 +10,10 @@ import { InfoData } from "../homepage/data/InfoData";
 const WelcomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    console.log("Welcome page loaded")
+  }, []);
+
   //for the DropDown.
   const toggle = () => {
     setIsOpen(!isOpen);

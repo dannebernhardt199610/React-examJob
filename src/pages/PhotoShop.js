@@ -4,7 +4,6 @@ import Menu from "../components/Menu";
 import Categories from "../components/Categories";
 import Search from "../components/Search";
 import styled from "styled-components";
-import pizzaImage from "./images/pizzaa.jpg";
 import photoImage from "./photoImages/photo-background.jpg";
 import Navbar from "../components/Navbar";
 
@@ -39,6 +38,7 @@ const Title = styled.div`
     justify-content: center;
     padding: 1.5rem;
     font-weight: bold;
+    text-shadow: 2px 2px cyan;
     color: white;
 
     @media screen and (max-width: 480px) {
@@ -51,7 +51,7 @@ const PhotoPage = () => {
   const allCategories = ["all", ...new Set(Data.map((item) => item.category))];
 
   const [items, setItems] = useState(Data);
-  const [categories, setCategories] = useState(allCategories);
+  const [categories] = useState(allCategories);
 
   /* filtrerar items om vi trycker all knappen laddar vi alla produkter */
   const filterItems = (category) => {
@@ -65,13 +65,9 @@ const PhotoPage = () => {
   };
 
   /* sök på en specifik vara */
-  const searchItem = (category) => {
-    if (category === "") {
-      setItems(Data);
-      return;
-    }
-    const newItems = Data.filter(
-      (item) => item.title.toLowerCase() === category
+  const searchItem = (title) => {
+    const newItems = items.filter(
+      (item) => item.title.toLowerCase() === title
     );
     setItems(newItems);
   };

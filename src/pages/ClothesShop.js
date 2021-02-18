@@ -10,7 +10,7 @@ const ClothesShop = () => {
   const allCategories = ["all", ...new Set(Data.map((item) => item.category))];
 
   const [items, setItems] = useState(Data);
-  const [categories, setCategories] = useState(allCategories);
+  const [categories] = useState(allCategories);
 
   /* filtrerar items om vi trycker all knappen laddar vi alla produkter */
   const filterItems = (category) => {
@@ -37,7 +37,7 @@ const ClothesShop = () => {
 
     /* gör att sidan ej laddar om när vi trycker på knapparna*/
     useEffect(() => {
-        console.log("Stars webshop opened");
+        console.log("Clothes webshop opened");
       }, []);
     
   return (
@@ -47,7 +47,7 @@ const ClothesShop = () => {
         <section className="menu-section">
           <p className="anim-circle"></p>
           <div className="title">
-            <h1> Our Clothes </h1>
+            <h1> Clothes</h1>
           </div>
           <div className="underline"></div>
           <Search categories={categories} filterItems={searchItem} />

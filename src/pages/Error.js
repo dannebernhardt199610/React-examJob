@@ -17,12 +17,13 @@ const Title = styled.div`
 text-align: center;
 font-size: 5rem;
 font-weight: bold;
+color: white;
 `
 
 export default function Error() {
     return (
         <Background>
-            <Title>Error </Title>
+            <Title>Wrong adress! Please check ur URL </Title>
         </Background>
     )
 }

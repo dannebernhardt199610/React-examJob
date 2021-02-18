@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { links, social } from "../data/Data";
 import { Link } from "react-router-dom";
@@ -18,7 +18,7 @@ const Navbar = () => {
         </button>
         <ul className="links" >
           {links.map((link) => {
-            const { id, url, icon, text } = link;
+            const { id, url, icon } = link;
             return (
               <li key={id} id={showLinks ? "" : "hidden"}>
                 <Link to={url}>{icon}</Link>
